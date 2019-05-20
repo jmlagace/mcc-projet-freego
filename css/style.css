@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Stylish');
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+}
+
+
+.underline {
+    text-decoration-line: underline;
+}
+
+body {
+    background-color: #7da5a6;
+}
+
+h3 {
+    color: #804d4d;
+    font-family: 'Courgette', cursive;
+    font-style: oblique;
+    font-size: 25px;
+    margin-left: 610px;
+    margin-top: 65px;
+}
+
+h4 {
+    color: white;
+    font-size: 20px;
+}
+
+h5 {
+    color: #804d4d;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    margin-left: 120px;
+
+
+}
+
+.divmama {
+    background-color: #F9EBEA;
+    width: 1200px;
+    max-width: inherit;
+    min-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.header {
+    background-color: #9f6060;
+    height: 250px;
+    width: 100%;
+    border-bottom: 5px solid #7da5a6;
+}
+
+.divmama header img {
+    margin: 30px 0 0 30px;
+    width: 300px;
+}
+
+.header h1 {
+    position: absolute;
+    color: #fff;
+    font-size: 150px;
+    text-shadow: #3c3636 1px -1px 2px, #3c3636 -1px 1px 2px, #3c3636 1px 1px 2px, #3c3636 -1px -1px 2px;
+    display: inline-block;
+    margin-top: 140px;
+    margin-left: 90px;
+    font-family: 'Stylish', sans-serif;
+    border-top: 20px;
+}
+
+.researcharea {
+    border: 0.8px solid #669999;
+    background-color: #C8C8C8;
+    width: 60%;
+    padding: 25px;
+    border-radius: 25px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.recherche {
+    margin-left: 150px;
+
+}
+
+.rechercheavance {
+    width: 161px;
+    margin: 0 35%;
+    margin-top: 15px;
+}
+
+.repas {
+    width: 266px;
+}
+
+.aucomplet {
+    width: 80%;
+    background-color: #bc8f8f;
+    margin: auto;
+    padding: 10px;
+    height: auto;
+    border: 1px solid #7da5a6;
+    margin-bottom: 10px;
+}
+
+.recette_gauche {
+    width: 40%;
+    border: 1px solid white;
+    margin: 5px;
+    height: auto;
+    float: left;
+
+}
+
+.recette_gauche img {
+    width: 380px;
+    border: 2px solid white;
+}
+
+.recette_gauche p {
+    line-height: 0.2;
+    margin: 15px;
+    color: aliceblue;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.recette_gauche h4 {
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.recette_gauche ul {
+    color: aliceblue;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.5;
+}
+
+.recette_gauche ul li {
+    color: aliceblue;
+}
+
+.recette_droite {
+    width: 58%;
+    border: 1px solid white;
+    margin: 5px;
+    height: 369px;
+    margin-left: 400px;
+    overflow: auto;
+}
+
+.recette_droite h4 {}
+
+.recette_droite p {}
+
+.recette_droite ol {
+    color: aliceblue;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.recette_droite ol li {
+    color: aliceblue;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.recette_droite ul {
+    color: aliceblue;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.recette_droite ul li {
+    color: aliceblue;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.5;
+}
+
+footer {
+    background-color: #C8C8C8;
+    height: 150px;
+    font-family: 'Quicksand', sans-serif;
+    border-top: 5px solid #7da5a6;
+
+}
+
+textarea {
+    background-color: #C8C8C8;
+    border: 1px solid white; 
+    
+}
