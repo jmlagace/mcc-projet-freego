@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <script>
+            function effectuerRecherche() 
+            {
+                window.fetch("http://mcc-freego-api.onminions.cloud/_/items/recettes?fields=title,etapes_preparation,image_recette.%2A&filter[ingredients][contains]=" + document.getElementById("ingredient").value)
+                    .then(function(response) {
+                        return response.json();
+                    })
+                    .then(function(recettesJson) {
+                        console.log(recettesJson);
+
+                        document.getElementById("recettes-trouvees").innerHTML = "";                      
+
+                        if (recettesJson.data.length == 0) {
+                            document.getElementById("recettes-trouvees").innerHTML = "<h1>Ouch!, il n'y a pas de recette avec ces ingrédients... essayez à nouveau!</h1>";
+                        } else {
+                            recettesJson.data.forEach(element => {
+                                creerRecette(element.title, element.etapes_preparation, element.image_recette.data.full_url);
+                            });
+                        }                                      
+                    });
+
+            }
+
+            function creerRecette(titre, recette, urlImage)
+            {    
+                var divElement = document.createElement("div");
+                var titreElement = document.createElement("h1");
+                titreElement.innerText = titre;
+                var recetteElement = document.createElement("p");
+                recetteElement.classList ="recette";
+                recetteElement.innerHTML = recette;
+
+                var recetteElementImage = document.createElement("img");
+                recetteElementImage.src = urlImage /*"http://www.placepuppy.net/400/250"*/;
+
+                divElement.appendChild(titreElement);
+                divElement.appendChild(recetteElementImage);
+                divElement.appendChild(recetteElement);
+               
+                document.getElementById("recettes-trouvees").appendChild(divElement);                
+            }
+
+            function ajouterRecetteClick() 
+            {
+                creerRecette( document.getElementById("ingredient").value, "Ca va être long!!!!");
+            }
+            
+        </script>
+    </head>
+    <body>
+        <input id="ingredient">
+        <div onclick="effectuerRecherche();">Rechercher</div>
+        <div onclick="ajouterRecetteClick();">Click moi pour ajouter une recette</div>
+        <message id="message"></message>
+        <div id="recettes-trouvees"></div>
+
+        <script>
+                    (function () {
+                creerRecette("Grilled Cheeze (pour Virginie)", "Griller le pain<br/>Mettre le fromage<br/>déguster");
+            })();
+
+</script>
+    </body>    
+</html>
